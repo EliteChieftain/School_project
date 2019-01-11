@@ -44,3 +44,19 @@ I:\School_project\Pers_ach\obj\Debug\Pers_ach.csproj.CoreCompileInputs.cache
 I:\School_project\Pers_ach\obj\Debug\Pers_ach.csproj.CopyComplete
 I:\School_project\Pers_ach\obj\Debug\Pers_ach.exe
 I:\School_project\Pers_ach\obj\Debug\Pers_ach.pdb
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\obj\Debug\Pers_ach.csprojAssemblyReference.cache
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\obj\Debug\Pers_ach.Main.resources
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\obj\Debug\Pers_ach.Properties.Resources.resources
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\obj\Debug\Pers_ach.csproj.GenerateResource.cache
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\obj\Debug\Pers_ach.csproj.CoreCompileInputs.cache
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\obj\Debug\Pers_ach.exe
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\obj\Debug\Pers_ach.pdb
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\bin\Debug\Pers_ach.exe.config
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\bin\Debug\Pers_ach.exe
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\bin\Debug\Pers_ach.pdb
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\bin\Debug\MySql.Data.dll
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\bin\Debug\MySql.Web.dll
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\bin\Debug\Google.Protobuf.dll
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\bin\Debug\MySql.Data.xml
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\bin\Debug\MySql.Web.xml
+C:\Users\Kamil_000\Desktop\Новая папка\Pers_ach\obj\Debug\Pers_ach.csproj.CopyComplete
