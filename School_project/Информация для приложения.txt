@@ -7,3 +7,6 @@ SELECT * FROM all_students WHERE Класс = "10-Д"
 GitHub
 Kamilmuradov300@gmail.com
 1}sSfy#z}W#u
+
+SELECT * FROM Мурадов Камил Джавидович
+SELECT * FROM Мурадов Камил Джавидович
