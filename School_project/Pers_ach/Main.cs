@@ -19,6 +19,8 @@ namespace Pers_ach
         private string cmd_str;
 
         private string new_cmd_str;
+        private string ppl_cmd_str;
+
 
 
         private OpenFileDialog openFileDialog;
@@ -32,7 +34,6 @@ namespace Pers_ach
         public Main() //инициализация
         {
             InitializeComponent();
-
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e) //чары для пароля
@@ -57,7 +58,7 @@ namespace Pers_ach
         public void button2_Click(object sender, EventArgs e) //загрузка файла в БД
         {
            
-        }
+        }//еще не сделано!!!!!!!!!!!!!
 
         private void button3_Click(object sender, EventArgs e) //подключение по нажатию кнопки "подключиться"
         {
@@ -69,8 +70,16 @@ namespace Pers_ach
             }
             else
             {
-                conn_str = "server=" + textBox1.Text + ";user=" + textBox2.Text + " ;password=" + textBox3.Text + ";database=" + comboBox1.SelectedItem + ";old guids = true;";
+                /*textBox1.Text = "db4free.net";
+                textBox2.Text = "boy_next_root";
+                textBox3.Text = "6f444895";
+                comboBox1.SelectedText = "boy_next_db";
+                comboBox2.SelectedText = "all_students";*/
+
+                conn_str = "server=" + textBox1.Text + ";user=" + textBox2.Text + " ;password=" + textBox3.Text + ";database=" + comboBox1.SelectedItem.ToString() + ";old guids = true;";
                 cmd_str = "SELECT * FROM " + comboBox2.SelectedItem;
+                //conn_str = "server=" + textBox1.Text + ";user=" + textBox2.Text + " ;password=" + textBox3.Text + ";database=boy_next_db;old guids = true;";
+                //cmd_str = "SELECT * FROM all_students";  
 
                 sql_conn = new MySqlConnection(conn_str);
                 sql_conn.Open();
@@ -82,7 +91,7 @@ namespace Pers_ach
 
                 dataGridView1.DataSource = sql_ds.Tables[0].DefaultView;
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
+           }
         }
 
         private void button4_Click(object sender, EventArgs e) //выполнение сортировки и поиска
@@ -95,11 +104,6 @@ namespace Pers_ach
             }
             else
             {
-                if (radioButton1.Checked == true)
-                {
-                    new_cmd_str = "SELECT * FROM " + comboBox2.SelectedItem + " WHERE Класс = \"" + textBox5.Text + "\"";
-                }
-
                 MySqlCommand new_sql_cmd = new MySqlCommand(new_cmd_str, sql_conn);
                 sql_da = new MySqlDataAdapter(new_cmd_str, sql_conn);
                 sql_ds = new DataSet();
@@ -108,6 +112,29 @@ namespace Pers_ach
                 dataGridView1.DataSource = sql_ds.Tables[0].DefaultView;
                 dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
+        }//еще не сделано!!!!!!!!!!!!!
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dataGridView1.Rows[e.RowIndex];
+
+                ppl_cmd_str = "SELECT * FROM `" + row.Cells["ФИО"].Value.ToString() + "`";
+                textBox4.Text = ppl_cmd_str;
+                sql_cmd = new MySqlCommand(ppl_cmd_str, sql_conn);
+                sql_da = new MySqlDataAdapter(ppl_cmd_str, sql_conn);
+                sql_ds = new DataSet();
+                sql_da.Fill(sql_ds);
+
+                dataGridView2.DataSource = sql_ds.Tables[0].DefaultView;
+                dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
